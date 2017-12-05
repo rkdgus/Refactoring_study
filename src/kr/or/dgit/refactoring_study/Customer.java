@@ -49,14 +49,13 @@ public class Customer {
 			}
 			frequentRenterPoints++;
 
-			if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) && each.getDaysRented() > 1) 
+			if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) && each.getDaysRented() > 1)
 				frequentRenterPoints++;
 
-				result.append("\t" + each.getMovie().getTitle());
-				result.append("\t" + String.valueOf(thisAmout) + "\n");
+			result.append("\t" + each.getMovie().getTitle());
+			result.append("\t" + String.valueOf(thisAmout) + "\n");
 
-				totalAmount += thisAmout;
-			
+			totalAmount += thisAmout;
 
 		}
 		result.append("누적 대여료 : " + String.valueOf(totalAmount) + "\n");
